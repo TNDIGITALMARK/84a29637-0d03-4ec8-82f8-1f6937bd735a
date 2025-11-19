@@ -19,8 +19,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Only1 Media PR - Strategic Public Relations & Brand Communications",
+  description: "Elevate your brand with strategic PR. We craft compelling narratives, secure media coverage, and deliver measurable results for forward-thinking companies.",
+  keywords: "public relations, PR agency, media relations, crisis management, brand strategy, digital PR, thought leadership, PR campaigns",
+  authors: [{ name: "Only1 Media PR" }],
+  openGraph: {
+    title: "Only1 Media PR - Strategic Public Relations",
+    description: "Elevate your brand with strategic PR. We craft compelling narratives, secure media coverage, and deliver measurable results.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Only1 Media PR - Strategic Public Relations",
+    description: "Elevate your brand with strategic PR. We craft compelling narratives, secure media coverage, and deliver measurable results.",
+  },
 };
 
 export default function RootLayout({

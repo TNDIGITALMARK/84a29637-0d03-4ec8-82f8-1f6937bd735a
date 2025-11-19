@@ -1,40 +1,40 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* ============================================
    ONLY1 MEDIA PR - DESIGN SYSTEM
-   Extracted from ai-generated-preview.png
-   PIXEL-PERFECT SPECIFICATION
+   Based on https://only1mediapr.com/
+   Professional PR Agency Website
    ============================================ */
 
 :root {
   /* ===== COLOR SYSTEM (HSL for compatibility) ===== */
-  /* Navy Blue Primary - #2c3e5f converted to HSL */
+  /* Primary Blue - #1863DC from Only1 Media */
   --background: 0 0% 100%;
-  --foreground: 217 36% 27%; /* #2c3e5f navy for text */
+  --foreground: 217 91% 47%; /* #1863DC primary blue */
 
   /* Card backgrounds */
   --card: 0 0% 100%;
-  --card-foreground: 217 36% 27%;
+  --card-foreground: 217 91% 47%;
 
   /* Popovers */
   --popover: 0 0% 100%;
-  --popover-foreground: 217 36% 27%;
+  --popover-foreground: 217 91% 47%;
 
-  /* Primary: Navy Blue (#2c3e5f) */
-  --primary: 217 36% 27%;
+  /* Primary: Blue (#1863DC) */
+  --primary: 217 91% 47%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Gold/Amber Accent (#f5a623) */
-  --secondary: 42 92% 55%;
+  /* Secondary: Dark Blue (#0056A7) */
+  --secondary: 210 100% 33%;
   --secondary-foreground: 0 0% 100%;
 
   /* Muted: Light gray backgrounds */
   --muted: 0 0% 96%;
-  --muted-foreground: 215 14% 47%; /* #6b7280 medium gray */
+  --muted-foreground: 0 0% 13%; /* #212121 neutral gray */
 
-  /* Accent: Gold for CTAs */
-  --accent: 42 92% 55%; /* #f5a623 gold */
+  /* Accent: Primary Blue for CTAs */
+  --accent: 217 91% 47%; /* #1863DC blue */
   --accent-foreground: 0 0% 100%;
 
   /* Destructive */
@@ -42,60 +42,55 @@
   --destructive-foreground: 0 0% 100%;
 
   /* Borders */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 217 36% 27%;
+  --border: 155 6% 82%; /* #D0D5D2 accent gray */
+  --input: 155 6% 82%;
+  --ring: 217 91% 47%;
 
   /* Border Radius */
-  --radius: 0.5rem; /* 8px */
+  --radius: 0.375rem; /* 6px from reference */
 
   /* Sidebar */
-  --sidebar-background: 217 36% 27%;
+  --sidebar-background: 217 91% 47%;
   --sidebar-foreground: 0 0% 100%;
-  --sidebar-primary: 42 92% 55%;
+  --sidebar-primary: 210 100% 33%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 217 36% 32%;
+  --sidebar-accent: 217 91% 52%;
   --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-border: 217 36% 32%;
-  --sidebar-ring: 42 92% 55%;
+  --sidebar-border: 217 91% 52%;
+  --sidebar-ring: 210 100% 33%;
 
   /* ===== CUSTOM DESIGN TOKENS ===== */
-  /* Navy Palette */
-  --navy-primary: #2c3e5f;
-  --navy-dark: #1a2332;
-  --navy-overlay: rgba(44, 62, 95, 0.75);
+  /* Blue Palette */
+  --blue-primary: #1863DC;
+  --blue-dark: #0056A7;
+  --blue-overlay: rgba(24, 99, 220, 0.9);
 
-  /* Gold Palette */
-  --gold-accent: #f5a623;
-  --gold-hover: #e09615;
+  /* Neutral Palette */
+  --neutral-gray: #212121;
+  --accent-gray: #D0D5D2;
+  --white: #FFFFFF;
 
-  /* Grays */
-  --gray-light: #f5f5f5;
-  --gray-medium: #6b7280;
-  --gray-dark: #374151;
-
-  /* Typography Sizes */
+  /* Typography Sizes (14px body, 18px headings from reference) */
   --text-hero-title: 3.5rem; /* 56px */
   --text-hero-subtitle: 1.25rem; /* 20px */
-  --text-section-title: 2.25rem; /* 36px */
-  --text-card-title: 1.125rem; /* 18px */
-  --text-body: 1rem; /* 16px */
-  --text-small: 0.875rem; /* 14px */
+  --text-section-title: 2.5rem; /* 40px */
+  --text-card-title: 1.125rem; /* 18px from reference */
+  --text-body: 0.875rem; /* 14px from reference */
+  --text-small: 0.75rem; /* 12px */
 
   /* Spacing */
-  --spacing-section: 100px;
+  --spacing-section: 80px;
   --spacing-container: 24px;
-  --spacing-card-gap: 48px;
+  --spacing-card-gap: 32px;
 
   /* Sizes */
-  --icon-circle-size: 88px;
-  --button-height: 52px;
-  --nav-height: 80px;
+  --button-height: 48px;
+  --nav-height: 72px;
 
-  /* Shadows */
-  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.12);
-  --shadow-large: 0 8px 24px rgba(0, 0, 0, 0.15);
+  /* Shadows (subtle from reference) */
+  --shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 8px 20px rgba(0, 0, 0, 0.12);
 
   /* Transitions */
   --transition-fast: 0.2s ease-in-out;
@@ -214,6 +209,10 @@
   border-color: hsl(var(--border));
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
@@ -230,8 +229,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--navy-primary);
+  letter-spacing: -0.02em;
+  color: var(--neutral-gray);
   line-height: 1.2;
 }
 
@@ -252,7 +251,7 @@ h3 {
 
 h4 {
   font-size: var(--text-card-title);
-  font-weight: 600;
+  font-weight: 700; /* 18px heading weight from reference */
 }
 
 h5 {
@@ -267,18 +266,21 @@ h6 {
 
 p {
   margin-bottom: 1rem;
-  color: var(--gray-dark);
+  color: var(--neutral-gray);
+  font-size: var(--text-body); /* 14px from reference */
+  line-height: 1.6;
 }
 
 /* Links */
 a {
-  color: var(--navy-primary);
+  color: var(--blue-primary);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--gold-accent);
+  color: var(--blue-dark);
+  opacity: 0.8; /* Opacity hover effect from reference */
 }
 
 /* Button defaults */
@@ -295,6 +297,12 @@ input, textarea, select {
   font-size: var(--text-body);
 }
 
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  ring-color: var(--blue-primary);
+  ring-width: 2px;
+}
+
 /* Custom shadow utilities */
 .shadow-subtle {
   box-shadow: var(--shadow-subtle);
@@ -306,4 +314,11 @@ input, textarea, select {
 
 .shadow-large {
   box-shadow: var(--shadow-large);
+}
+
+/* Utility classes */
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
